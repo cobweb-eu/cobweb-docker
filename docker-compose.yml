@@ -38,3 +38,8 @@ services:
             - "443:443"
         container_name: "apache"
 
+    fieldtrip-open:
+        build:
+           context: https://github.com/edina/fieldtrip-open-dockerisation.git
+        ports:
+            - "8080:80"
