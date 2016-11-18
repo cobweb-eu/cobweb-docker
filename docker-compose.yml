@@ -27,8 +27,6 @@ services:
             - data
     data:
         build: ./data
-        ports:
-            - "9102:9102"
 
     apache:
         build: 
