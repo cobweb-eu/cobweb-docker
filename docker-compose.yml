@@ -36,8 +36,9 @@ services:
             - "443:443"
         container_name: "apache"
 
-    fieldtrip-open:
+    pcapi:
         build:
-           context: https://github.com/edina/fieldtrip-open-dockerisation.git
-        ports:
-            - "8080:80"
+            context: ./pcapi
+        expose:
+           - "8080"
+        container_name: "pcapi"
