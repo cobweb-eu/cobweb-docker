@@ -17,6 +17,8 @@ This is a MVP, that instantiates an SDI through a composition of dockerized serv
 * Tomcatv7-jre8/Cobweb GN
 * Tomcatv7/Geoserverv2.8.5
 * PostgreSQLv9.3/PostGISv2.1
+* PCAPI v1.3
+* Survey Designerv1.0.0
 
 While storage is persisted in **volumes** associated to a data container, the services are *volatile*, in the sense that it is relatively *cheap* to kill them and create them again.
 
@@ -112,15 +114,27 @@ PostgreSQL is provided with PostGIS installed, and the GeoNetwork and GeoServer 
 
 Using COBWEB
 -----------------
-When the system is up and running, you can access GeoNetwork on this address:
+When the system is up and running, the landing page will be at:
+
+ http://[replace_me]
+
+You can access GeoNetwork on this address:
 
  http://[replace_me]/geonetwork
 
-Likewise you can access GeoServer on this address:
+You can access GeoServer on this address:
 
- https//[replace_me]/geoserver
+ http//[replace_me]/geoserver
 
-If you are running docker on Linux, just replace [replace_me] by _localhost_ (_e.g._: 127.0.0.1). Otherwise, replace it by the address of your docker machine. You can find this address, by typing:
+You can access PCAPI on this address:
+
+ http//[replace_me]/1.3/pcapi/auth/providers
+
+You can access the Survey Designer on this address:
+
+ http//[replace_me]/survey-designer/?survey=Test%20Survey\&sid=1111\&public=true#survey-designer
+
+If you are running docker on Linux or OS X, just replace [replace_me] by _localhost_ (_e.g._: 127.0.0.1). Otherwise, replace it by the address of your docker machine. You can find this address, by typing:
 
 ```bash
 docker-machine ip
